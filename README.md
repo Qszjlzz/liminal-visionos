@@ -34,7 +34,7 @@ xcodebuild \
 
 - [参赛作品说明](《呼吸岛》初赛作品说明文档(1).docx)
 - [交付与答辩指南](交付与答辩指南.md)
-- [Vision Pro 演示视频（720p）](呼吸岛-VisionPro演示-720p.m4v)
+- Vision Pro 演示录屏为大型本地交付文件，未纳入源码仓库。
 - [UI 调研与 Agent 建议](呼吸岛-UI调研与Agent建议.md)
 
 ## 原型说明
