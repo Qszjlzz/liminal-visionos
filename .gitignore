@@ -1,0 +1,17 @@
+.DS_Store
+
+# Xcode local state and build output
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+
+# Local simulator validation artifacts
+validation-artifacts/
+visionos-*.png
+
+# Keep the 720p .m4v demo, but not the large source recordings.
+*.mp4
+
+# Local tooling downloaded for this workspace only
+.tools/
