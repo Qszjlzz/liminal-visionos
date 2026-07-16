@@ -4,6 +4,7 @@ import SwiftUI
 struct ImmersiveTherapyView: View {
     @EnvironmentObject private var store: DemoStore
     @EnvironmentObject private var appModel: AppModel
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
 
     var body: some View {
         RealityView { content, attachments in
@@ -83,6 +84,23 @@ struct ImmersiveTherapyView: View {
                     }
                     .frame(width: 320)
                 }
+            }
+        }
+        .overlay(alignment: .bottom) {
+            if store.laborEngine.safetyEvent != .none {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(store.laborEngine.safetyEvent.rawValue).font(.headline).foregroundStyle(.white)
+                    Text(store.laborEngine.safetyEvent.instruction).foregroundStyle(.white.opacity(0.82))
+                    HStack {
+                        Button("暂停疗程") { store.laborEngine.pause() }
+                        Button("退出沉浸") { Task { await dismissImmersiveSpace() } }
+                        Button("呼叫医护") { store.laborEngine.clearSafety() }
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+                .padding(18)
+                .background(.black.opacity(0.72), in: RoundedRectangle(cornerRadius: 12))
+                .padding()
             }
         }
     }

@@ -35,15 +35,6 @@ enum ConditionType: String, CaseIterable, Identifiable {
         }
     }
 
-    var recommendedRelief: Double {
-        switch self {
-        case .burn: return 2.8
-        case .postoperative: return 2.2
-        case .cancer: return 2.0
-        case .labor: return 2.6
-        case .chronic: return 1.8
-        }
-    }
 }
 
 enum PainLocation: String, CaseIterable, Identifiable {
@@ -167,6 +158,7 @@ struct TherapyRecommendation: Identifiable {
     let sessionPlan: String
     let expectedOutcome: String
     let safetyNote: String
+    let explanationFactors: [String]
 }
 
 struct TherapySession {

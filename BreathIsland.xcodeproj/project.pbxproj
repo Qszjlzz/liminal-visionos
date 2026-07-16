@@ -6,8 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		08E9031A8CE726D58A93F3DF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A72EF0CD9938F02AAFB0F /* Models.swift */; };
+		1041F32E2425D912C72AE737 /* SessionSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB2E088958FE803D3FF7D4 /* SessionSimulation.swift */; };
+		2464E51664107EEBD67321FB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F152048EF2E160EBFDC05F /* Theme.swift */; };
+		3124A9E6B2A34867760BB6C5 /* BreathIslandCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554B0C6E3656794DE15CDF7 /* BreathIslandCompanionApp.swift */; };
+		43E79F58E3816DEB2511791F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10332A282A51CD7114C4418 /* Foundation.framework */; };
+		4D2EB9FF7517820C16A31A77 /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160EE8909E4C4DE49C59294 /* RecommendationEngine.swift */; };
+		59C52C556062D37F28246CC6 /* DemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBBFA5ED9254AFE54CFA02 /* DemoStore.swift */; };
+		66D33164A0EDA858CF9FCFF1 /* CompanionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E857D6B911B5AC77639883 /* CompanionContentView.swift */; };
+		7418338D215B46B552E04242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ECFC516B96A37C49E8AC553 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		38E857D6B911B5AC77639883 /* CompanionContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompanionContentView.swift; path = BreathIslandCompanion/CompanionContentView.swift; sourceTree = "<group>"; };
+		5A7A72EF0CD9938F02AAFB0F /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Models.swift; path = BreathIsland/Models.swift; sourceTree = "<group>"; };
+		6160EE8909E4C4DE49C59294 /* RecommendationEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecommendationEngine.swift; path = BreathIsland/RecommendationEngine.swift; sourceTree = "<group>"; };
+		6ECFC516B96A37C49E8AC553 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BreathIsland/Assets.xcassets; sourceTree = "<group>"; };
+		81A2E87AEE6912682D9474A0 /* BreathIslandCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathIslandCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CBBFA5ED9254AFE54CFA02 /* DemoStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DemoStore.swift; path = BreathIsland/DemoStore.swift; sourceTree = "<group>"; };
+		9554B0C6E3656794DE15CDF7 /* BreathIslandCompanionApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BreathIslandCompanionApp.swift; path = BreathIslandCompanion/BreathIslandCompanionApp.swift; sourceTree = "<group>"; };
 		A10000000000000000000005 /* BreathIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DB2E088958FE803D3FF7D4 /* SessionSimulation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionSimulation.swift; path = BreathIsland/SessionSimulation.swift; sourceTree = "<group>"; };
+		C10332A282A51CD7114C4418 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E2F152048EF2E160EBFDC05F /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = BreathIsland/Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -32,6 +54,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12FAED209D10E7AC36C2D51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E79F58E3816DEB2511791F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000000000000000000000B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,11 +72,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18ADF623D210FE5C4832B1C9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C10332A282A51CD7114C4418 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		44494041C62671765BA0FADA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18ADF623D210FE5C4832B1C9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A10000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000008 /* BreathIsland */,
 				A10000000000000000000004 /* Products */,
+				44494041C62671765BA0FADA /* Frameworks */,
+				9554B0C6E3656794DE15CDF7 /* BreathIslandCompanionApp.swift */,
+				38E857D6B911B5AC77639883 /* CompanionContentView.swift */,
+				5A7A72EF0CD9938F02AAFB0F /* Models.swift */,
+				88CBBFA5ED9254AFE54CFA02 /* DemoStore.swift */,
+				6160EE8909E4C4DE49C59294 /* RecommendationEngine.swift */,
+				E2F152048EF2E160EBFDC05F /* Theme.swift */,
+				C0DB2E088958FE803D3FF7D4 /* SessionSimulation.swift */,
+				6ECFC516B96A37C49E8AC553 /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000005 /* BreathIsland.app */,
+				81A2E87AEE6912682D9474A0 /* BreathIslandCompanion.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +117,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		532BD080499C18F080D78109 /* BreathIslandCompanion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A9F4082AB9B22E6F27A0A2 /* Build configuration list for PBXNativeTarget "BreathIslandCompanion" */;
+			buildPhases = (
+				6E82C27FEE41636F59EE4E80 /* Sources */,
+				12FAED209D10E7AC36C2D51A /* Frameworks */,
+				A457F92513519195E770B508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BreathIslandCompanion;
+			productName = BreathIslandCompanion;
+			productReference = 81A2E87AEE6912682D9474A0 /* BreathIslandCompanion.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A10000000000000000000006 /* BreathIsland */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A10000000000000000000007 /* Build configuration list for PBXNativeTarget "BreathIsland" */;
@@ -77,8 +150,6 @@
 				A10000000000000000000008 /* BreathIsland */,
 			);
 			name = BreathIsland;
-			packageProductDependencies = (
-			);
 			productName = BreathIsland;
 			productReference = A10000000000000000000005 /* BreathIsland.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				A10000000000000000000006 /* BreathIsland */,
+				532BD080499C18F080D78109 /* BreathIslandCompanion */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +197,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A457F92513519195E770B508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7418338D215B46B552E04242 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E82C27FEE41636F59EE4E80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3124A9E6B2A34867760BB6C5 /* BreathIslandCompanionApp.swift in Sources */,
+				66D33164A0EDA858CF9FCFF1 /* CompanionContentView.swift in Sources */,
+				08E9031A8CE726D58A93F3DF /* Models.swift in Sources */,
+				59C52C556062D37F28246CC6 /* DemoStore.swift in Sources */,
+				4D2EB9FF7517820C16A31A77 /* RecommendationEngine.swift in Sources */,
+				2464E51664107EEBD67321FB /* Theme.swift in Sources */,
+				1041F32E2425D912C72AE737 /* SessionSimulation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000000000000000000000A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +232,49 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6032748DBC4465AD18FBB00B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "呼吸岛 Companion";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qszjlzz.BreathIslandCompanion;
+				PRODUCT_NAME = BreathIslandCompanion;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7E56F14117E9E96D019BAC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "呼吸岛 Companion";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qszjlzz.BreathIslandCompanion;
+				PRODUCT_NAME = BreathIslandCompanion;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A1000000000000000000000D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -250,6 +387,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17A9F4082AB9B22E6F27A0A2 /* Build configuration list for PBXNativeTarget "BreathIslandCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E56F14117E9E96D019BAC5C /* Release */,
+				6032748DBC4465AD18FBB00B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A10000000000000000000003 /* Build configuration list for PBXProject "BreathIsland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

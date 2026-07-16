@@ -2,6 +2,7 @@ import Foundation
 
 @MainActor
 final class DemoStore: ObservableObject {
+    let laborEngine = LaborSessionEngine()
     @Published var currentAssessment: PainAssessment
     @Published var latestRecommendation: TherapyRecommendation
     @Published var activeSession: TherapySession?
@@ -65,6 +66,7 @@ final class DemoStore: ObservableObject {
     }
 
     func startTherapy(scene: TherapyScene) {
+        if scene.targetCondition == .labor { laborEngine.start() }
         activeSession = TherapySession(
             scene: scene,
             progress: 0.12,
@@ -137,7 +139,7 @@ final class DemoStore: ObservableObject {
         let baseHeartRate = 96.0 - progress * 12.0
         let baseHRV = 22.0 + progress * 11.0
         let breathingRate = 18.0 - progress * 5.0
-        let painAfter = max(1.0, currentAssessment.intensity - progress * currentAssessment.conditionType.recommendedRelief)
+        let painAfter = max(1.0, currentAssessment.intensity - progress * 1.2)
 
         let sample = BiofeedbackSample(
             heartRate: baseHeartRate,
@@ -162,7 +164,7 @@ final class DemoStore: ObservableObject {
             BiofeedbackSample(heartRate: 95, hrv: 24, breathingRate: 18, painBefore: assessment.intensity, painAfter: assessment.intensity - 0.6, timestamp: now.addingTimeInterval(-270), label: "进入场景"),
             BiofeedbackSample(heartRate: 91, hrv: 27, breathingRate: 16, painBefore: assessment.intensity, painAfter: assessment.intensity - 1.1, timestamp: now.addingTimeInterval(-180), label: "呼吸同步"),
             BiofeedbackSample(heartRate: 87, hrv: 30, breathingRate: 15, painBefore: assessment.intensity, painAfter: assessment.intensity - 1.8, timestamp: now.addingTimeInterval(-90), label: "认知转移"),
-            BiofeedbackSample(heartRate: 84, hrv: 33, breathingRate: 14, painBefore: assessment.intensity, painAfter: assessment.intensity - recommendation.scene.targetCondition.recommendedRelief, timestamp: now, label: "结束"),
+            BiofeedbackSample(heartRate: 84, hrv: 33, breathingRate: 14, painBefore: assessment.intensity, painAfter: assessment.intensity - 1.2, timestamp: now, label: "演示结束"),
         ]
     }
 
@@ -204,7 +206,7 @@ final class DemoStore: ObservableObject {
         return [
             DoctorInsight(
                 title: "依从性",
-                detail: "最近 7 天完成 \(Int.random(in: 4...6)) 次计划疗程，完成率维持在 82% 左右。",
+                detail: "演示样本：最近 7 天完成 5 次计划疗程，完成率为 82%。",
                 level: .stable
             ),
             DoctorInsight(

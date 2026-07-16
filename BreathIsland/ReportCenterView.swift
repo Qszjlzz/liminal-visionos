@@ -150,7 +150,7 @@ struct ReportCenterView: View {
                                 Text("本次目标")
                                     .font(.system(size: 13, weight: .bold, design: .rounded))
                                     .foregroundStyle(AppTheme.moon)
-                                Text("在一次疗程内把疼痛主观评分压低约 \(String(format: "%.1f", store.currentAssessment.conditionType.recommendedRelief)) 分。")
+                                Text("本次引导目标：建立可跟随的呼吸节律与陪伴感，不代表临床疗效。")
                                     .font(.system(size: 14, weight: .medium, design: .rounded))
                                     .foregroundStyle(Color.white.opacity(0.76))
                             }

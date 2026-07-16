@@ -5,7 +5,6 @@ enum RootTab: Hashable {
     case assessment
     case therapy
     case report
-    case doctor
 }
 
 private struct RailItem: Identifiable {
@@ -22,11 +21,10 @@ struct ContentView: View {
     @EnvironmentObject private var appModel: AppModel
     @State private var selectedTab: RootTab
     private let railItems = [
-        RailItem(tab: .dashboard, title: "总览", detail: "疗程故事线", systemImage: "house"),
+        RailItem(tab: .dashboard, title: "疗程准备", detail: "分娩主线", systemImage: "house"),
         RailItem(tab: .assessment, title: "评估", detail: "疼痛与功能", systemImage: "waveform.path.ecg"),
-        RailItem(tab: .therapy, title: "治疗", detail: "Vision Pro 主端", systemImage: "visionpro"),
-        RailItem(tab: .report, title: "反馈", detail: "生物反馈报告", systemImage: "chart.xyaxis.line"),
-        RailItem(tab: .doctor, title: "医生端", detail: "临床共享视图", systemImage: "stethoscope")
+        RailItem(tab: .therapy, title: "沉浸治疗", detail: "Vision Pro 主端", systemImage: "visionpro"),
+        RailItem(tab: .report, title: "本次回顾", detail: "演示模拟数据", systemImage: "chart.xyaxis.line")
     ]
 
     init(initialTab: RootTab = .dashboard) {
@@ -207,8 +205,6 @@ struct ContentView: View {
                 TherapyHubView(selectedTab: $selectedTab)
             case .report:
                 ReportCenterView()
-            case .doctor:
-                DoctorConsoleView()
             }
         }
         .id(selectedTab)

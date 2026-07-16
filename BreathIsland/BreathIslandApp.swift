@@ -42,8 +42,6 @@ struct BreathIslandApp: App {
             return .therapy
         case "report":
             return .report
-        case "doctor":
-            return .doctor
         default:
             return .dashboard
         }
