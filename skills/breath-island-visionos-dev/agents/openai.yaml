@@ -1,0 +1,4 @@
+interface:
+  display_name: "Breath Island VisionOS Dev"
+  short_description: "Build 呼吸岛 in Xcode and Vision Pro Simulator"
+  default_prompt: "Use $breath-island-visionos-dev to update the 呼吸岛 visionOS app, rebuild it in Xcode, and verify the result in Apple Vision Pro Simulator."
