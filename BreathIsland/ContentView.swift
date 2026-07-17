@@ -96,11 +96,11 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 28, style: .continuous)
                 .fill(AppTheme.railGradient)
 
-            Image("LiminalPosterV2")
+            Image("LiminalLogo")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 136)
-                .opacity(0.95)
+                .frame(width: 154)
+                .opacity(0.92)
                 .padding(.trailing, 14)
                 .padding(.bottom, 12)
 

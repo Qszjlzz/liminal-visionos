@@ -1,5 +1,11 @@
 {
   "images" : [
+    {
+      "filename" : "liminal-app-icon.jpg",
+      "idiom" : "universal",
+      "platform" : "xros",
+      "size" : "1024x1024"
+    }
   ],
   "info" : {
     "author" : "xcode",

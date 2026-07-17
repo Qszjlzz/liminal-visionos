@@ -87,7 +87,7 @@ struct DashboardView: View {
 
                     HStack(spacing: 12) {
                         heroFact(title: "推荐场景", value: store.latestRecommendation.scene.name)
-                        heroFact(title: "预估降幅", value: String(format: "%.1f 分", store.currentAssessment.conditionType.recommendedRelief))
+                        heroFact(title: "引导目标", value: "稳定呼吸")
                         heroFact(title: "目标时长", value: "\(store.latestRecommendation.scene.durationMinutes) 分钟")
                     }
                 }
@@ -243,8 +243,8 @@ struct DashboardView: View {
                     }
                     .buttonStyle(PrimaryActionStyle())
 
-                    Button("看医生端") {
-                        selectedTab = .doctor
+                    Button("医护回看在 iPad") {
+                        selectedTab = .report
                     }
                     .buttonStyle(SecondaryActionStyle())
                 }
